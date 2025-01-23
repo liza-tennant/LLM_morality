@@ -1,0 +1,8 @@
+urllib3==1.26.6
+transformers==4.42.3
+accelerate
+-e git+https://github.com/huggingface/trl.git@78f8228874d5cf9c0e68952533cb377202e1eb22#egg=trl
+bitsandbytes==0.42.0
+loralib==0.1.2
+outlines==0.0.46
+wandb==0.17.2
