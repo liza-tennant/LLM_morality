@@ -14,13 +14,9 @@ If you use this code, please cite the following paper:
   title     = {Moral Alignment for LLM Agents},
   author    = {Tennant, Elizaveta and Hailes, Stephen and Musolesi, Mirco},
   booktitle = {Proceedings of the 13th International Conference on Learnong Representations (ICLR'25)},
-  publisher = {},
-  editor    = {},
-  pages     = {},
   year      = {2025},
-  month     = {},
+  month     = {04},
   note      = {Main Track},
-  doi       = {},
   url       = {https://arxiv.org/abs/2403.04202},
 }
 
