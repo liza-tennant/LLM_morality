@@ -2,7 +2,7 @@
 # Moral Alignment for LLM Agents
 
 This repository contains implementation and analysis code for the following paper: 
-Moral Alignment for LLM Agents, ICLR'25. [(Paper & Appendix on arXiv)](https://arxiv.org/abs/2410.01639) 
+Moral Alignment for LLM Agents, ICLR'25. [(Paper on arXiv)](https://arxiv.org/abs/2410.01639) 
 
 ## Cite us
 ***
