@@ -13,7 +13,7 @@ If you use this code, please cite the following paper:
 @INPROCEEDINGS{Tennant-ICLR2025,
   title     = {Moral Alignment for LLM Agents},
   author    = {Tennant, Elizaveta and Hailes, Stephen and Musolesi, Mirco},
-  booktitle = {Proceedings of the 13th International Conference on Learnong Representations (ICLR'25)},
+  booktitle = {Proceedings of the 13th International Conference on Learning Representations (ICLR'25)},
   year      = {2025},
   month     = {04},
   note      = {Main Track},
