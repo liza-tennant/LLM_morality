@@ -10,16 +10,14 @@ Moral Alignment for LLM Agents, ICLR'25. [(Paper on arXiv)](https://arxiv.org/ab
 If you use this code, please cite the following paper:
 
 ```bibtex
-@INPROCEEDINGS{Tennant-ICLR2025,
-  title     = {Moral Alignment for LLM Agents},
+@INPROCEEDINGS{tennant2025moral,
+  title     = {Moral Alignment for {LLM} Agents},
   author    = {Tennant, Elizaveta and Hailes, Stephen and Musolesi, Mirco},
   booktitle = {Proceedings of the 13th International Conference on Learning Representations (ICLR'25)},
   year      = {2025},
   month     = {04},
   note      = {Main Track},
-  url       = {https://arxiv.org/abs/2403.04202},
-}
-
+  url       = {https://openreview.net/forum?id=MeGDmZjUXy_
 ```
 
 You can contact the authors at: `l.karmannaya.16@ucl.ac.uk`
