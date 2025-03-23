@@ -17,7 +17,7 @@ If you use this code, please cite the following paper:
   year      = {2025},
   month     = {04},
   note      = {Main Track},
-  url       = {https://openreview.net/forum?id=MeGDmZjUXy_
+  url       = {https://openreview.net/forum?id=MeGDmZjUXy}
 ```
 
 You can contact the authors at: `l.karmannaya.16@ucl.ac.uk`
