@@ -29,8 +29,10 @@ Most alignment techniques for foundation models today rely on human preference d
 ## The environment 
 
 This code can be used to run RL-based fine-tuning of LLM-based agents using intrinsic moreal rewards defined for social dilemma games. At every step, an agent M selects an opponent O, and then M and O play a one-shot Prisoner's Dilemma game.
-The original payoffs in the game:
+The original payoffs in the game are:
 ![Payoffs for players M and O](pics/payoffs.png)
+
+![RL loop with LLM agent](pics/RL loop with LLM agent.png)
 
 ## The agents 
 
