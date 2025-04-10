@@ -32,7 +32,7 @@ This code can be used to run RL-based fine-tuning of LLM-based agents using intr
 The original payoffs in the game are:
 ![Payoffs for players M and O](pics/payoffs.png)
 
-![RL loop with LLM agent](pics/RL loop with LLM agent.png)
+![RL loop with LLM agent](pics/RLloop_withLLMagent.png)
 
 ## The agents 
 
