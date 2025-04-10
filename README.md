@@ -63,7 +63,7 @@ You will need to configure an HF_token and a WANDB_API key and paste these at th
 | **Parameter** | **Values tested** | **Values used in paper** | 
 | --- | --- | --- | 
 Model | *Gemma2-2b-it*, *GPT2-small* | *Gemma2-2b-it*
-Action tokens *{Clegal, Dlegal*} | *{action1, action2}*; *{action2, action1}*; *{A, B}*; *{B, A}*; *{X, Y}*; *{0,1}*; *{1,0}*; *{XY, YX}*; randomly generated strings of ASCII characters of varying lengths (2,3,7 tokens) | *{action1, action2}* at training time, *{action3, action4}* at test time
+Action tokens *{C~legal~, D~legal~*} | *{action1, action2}*; *{action2, action1}*; *{A, B}*; *{B, A}*; *{X, Y}*; *{0,1}*; *{1,0}*; *{XY, YX}*; randomly generated strings of ASCII characters of varying lengths (2,3,7 tokens) | *{action1, action2}* at training time, *{action3, action4}* at test time
 Batch size | 3; 5 | 5 for LLM vs static; 3 for LLM vs TFT |
 LoRA rank | 4; 64 | 64 |
 LoRA target modules | “all-linear”; [“q_proj”, “k_proj”, “v_proj”, “o_proj”] | “all-linear” |
