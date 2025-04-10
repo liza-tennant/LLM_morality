@@ -71,7 +71,7 @@ Use adaptive KL control | Yes; No | Yes |
 Starting KL coefficient in adaptive KL control | 0.1; 0.2 | 0.2 |
 Gradient accumulation steps | 1 (no gradient accumulation); 4 | 4 |
 Reward normalization & scaling | Used; Not used | Used |
-*R<sub>illegal<\sub>* | -6; -15; -100 | -6 |
+*R<sub>illegal</sub>* | -6; -15; -100 | -6 |
 *IPD* payoff range | 0-4; 0-100 | 0-4 |
 
 Otherwise, we use the defaut parameters from the TRL package (including learning rate in PPO). 
