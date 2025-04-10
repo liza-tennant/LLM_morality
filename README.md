@@ -55,6 +55,10 @@ Intall packages listed in requirements.txt into a Python environment.
 ```
 pip install -r requirements.txt
 ```
+
+### Run fine-tuning
+The fine-tuning jobs are defined in ```JOBS_finetuning_gemma.txt.```
+
 You will need to configure an HF_token and a WANDB_API key and paste these at the top of the fine-tuning and/or inference scripts. 
 | **Parameter** | **Values tested** | **Values used in paper** | 
 | --- | --- | --- | 
@@ -71,11 +75,6 @@ Rillegal | -6; -15; -100 | -6 |
 IPD payoff range | 0-4; 0-100 | 0-4 |
 
 Otherwise, we use the defaut parameters from the TRL package (including learning rate in PPO). 
-
-
-
-### Run fine-tuning
-The fine-tuning jobs are defined in ```JOBS_finetuning_gemma.txt.```
 
 ### Run inference
 The fine-tuning jobs are defined in ```JOBS_inference_gemma.txt.```
