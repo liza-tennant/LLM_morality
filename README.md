@@ -41,7 +41,9 @@ These experiments are run with different moral reward definitions, specifically:
 
 ## Fine-tuning specifications: 
 
-We perform fine-tuning with the ```Gemma2-2b-it``` model loaded from huggingface, and rely on the TRL package for RL-based fine-tuning (with PPO). Other mdoels from the ```transformers``` library can be easily substituted. 
+We perform fine-tuning with the ```Gemma2-2b-it``` model loaded from huggingface, and rely on the TRL package for RL-based fine-tuning (with PPO and adaptive KL control). Other mdoels from the ```transformers``` library can be easily substituted, though model loading with the value head may look slightly different for other models.
+
+Below you can find key information about our hyperprameters: 
 
 
 ## Run the experiments
@@ -54,6 +56,21 @@ Intall packages listed in requirements.txt into a Python environment.
 pip install -r requirements.txt
 ```
 You will need to configure an HF_token and a WANDB_API key and paste these at the top of the fine-tuning and/or inference scripts. 
+| **Parameter** | **Values tested** | **Values used in paper** | 
+| --- | --- | --- | 
+Model | *Gemma2-2b-it*, *GPT2-small* | *Gemma2-2b-it*
+Action tokens *{Clegal, Dlegal*} | *{action1, action2}*; *{action2, action1}*; *{A, B}*; *{B, A}*; *{X, Y}*; *{0,1}*; *{1,0}*; *{XY, YX}*; randomly generated strings of ASCII characters of varying lengths (2,3,7 tokens) | *{action1, action2}* at training time, *{action3, action4}* at test time
+Batch size | 3; 5 | 5 for LLM vs static; 3 for LLM vs TFT |
+LoRA rank | 4; 64 | 64 |
+LoRA target modules | “all-linear”; [“q_proj”, “k_proj”, “v_proj”, “o_proj”] | “all-linear” |
+Use adaptive KL control | Yes; No | Yes |
+Starting KL coefficient in adaptive KL control | 0.1; 0.2 | 0.2 |
+Gradient accumulation steps | 1 (no gradient accumulation); 4 | 4 |
+Reward normalization & scaling | Used; Not used | Used |
+Rillegal | -6; -15; -100 | -6 |
+IPD payoff range | 0-4; 0-100 | 0-4 |
+
+Otherwise, we use the defaut parameters from the TRL package (including learning rate in PPO). 
 
 
 
