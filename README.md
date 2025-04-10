@@ -24,7 +24,7 @@ You can contact the authors at: `l.karmannaya.16@ucl.ac.uk`
 
 ## The problem 
 
-Most alignment techniques for foundation models today rely on human preference data, which is costly and not trasnparetn in terms of the values being taught. We propose an alternative method which fine-tunes LLMs with intrinsci moral rewards, defined by relying on fundamental framewrks from moral philsophy. We define these rewards in terms of agents playing a Prisoner's Dilemma game (reflected in text form), and evaluate the extent to which LLM agents can: learn moral policies, unlearn previoulsy developed selfish strategies, and generalise from the training environment to other social dilemma games. 
+Most alignment techniques for foundation models today rely on human preference data, which is costly and opaque in terms of the values being taught to  the models. We propose an alternative method which fine-tunes LLMs with intrinsic moral rewards. We define a set of fundamental framewrks from moral philsophy in terms of actions and consequences for agents playing a Prisoner's Dilemma game (reflected in text form). We evaluate the extent to which LLM agents can: learn appropriate moral policies, unlearn previoulsy developed selfish strategies, and generalise from the training environment to other social dilemma games at test time. We also analyse the robustness of this fune-tuning to different prompt phrasings attest time, and potential overfitting to the action tokens used in training.  
 
 ## The environment 
 
