@@ -24,6 +24,8 @@ from collections import Counter
 
 sns.set_theme(font_scale=3)
 
+SAVE_FIGURES_PATH = 'MyFigures'
+
 #################################
 #### New plots for LLM Study ####
 #################################
@@ -622,7 +624,7 @@ def plot_regret_allgames(r_toplot, label, opponent, options, extra, include_NoFT
     else: 
         extratitle=''
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/regret_{label}_allgames_opp{opponent}_includeNoFT{include_NoFT}_{extratitle}.png', tight_layout=True)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/{EVALS_dir}/regret_{label}_allgames_opp{opponent}_includeNoFT{include_NoFT}_{extratitle}.png', tight_layout=True)
 
     # Show the plot
     plt.show()
@@ -808,7 +810,7 @@ def plot_regret_during_allgames(opponent, num_episodes, extra, options):
     plt.xlabel('Episode')
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/regret_DURING_opp{opponent}.pdf', tight_layout=True)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/regret_DURING_opp{opponent}.pdf', tight_layout=True)
 
     # Show the plot
     plt.show()
@@ -964,14 +966,14 @@ def plot_reward_during_allgames(opponent, num_episodes, extra, options):
     plt.xlabel('Episode')
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/reward_DURING_opp{opponent}.pdf', bbox_inches='tight', dpi=300) #tight_layout=True, dpi=300)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/reward_DURING_opp{opponent}.pdf', bbox_inches='tight', dpi=300) #tight_layout=True, dpi=300)
 
     # Show the plot
     #plt.show()
 
 
 os.getcwd()
-#os.chdir('/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/EVALaction21')
+#os.chdir('{SAVE_FIGURES_PATH}/RESULTS/EVALaction21')
 
 
 def calculate_eval_responses_unrelated(PARTs_detail, opponent, num_episodes_trained, option, extra, C_str, D_str, columns):
@@ -1127,7 +1129,7 @@ def visualise_unrelated_eval(opponent, extra, options, C_str, D_str):
     plt.tight_layout()
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/unrelated_opp{opponent}_noexplicitIPD.pdf', bbox_inches='tight', dpi=300)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/unrelated_opp{opponent}_noexplicitIPD.pdf', bbox_inches='tight', dpi=300)
 
     # Show the plot
     plt.show()
@@ -1262,7 +1264,7 @@ def visualise_reciprocity_eval(opponent, extra, options, C_str, D_str, stacked=F
     plt.tight_layout()
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/reciprocity_opp{opponent}_stacked{stacked}.pdf', bbox_inches='tight', dpi=300)
+    plt.savefig(f'/{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/reciprocity_opp{opponent}_stacked{stacked}.pdf', bbox_inches='tight', dpi=300)
 
     # Show the plot
     plt.show()
@@ -1403,7 +1405,7 @@ def visualise_reciprocity_eval_IPDonly(opponent, extra, options, C_str, D_str, s
     plt.tight_layout()
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/reciprocity_IPD_opp{opponent}_stacked{stacked}.pdf', bbox_inches='tight', dpi=300)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/reciprocity_IPD_opp{opponent}_stacked{stacked}.pdf', bbox_inches='tight', dpi=300)
 
     # Show the plot
     plt.show()
@@ -1565,7 +1567,7 @@ def visualise_othergames_eval(opponent, extra, options, C_str, D_str, include_Pr
     plt.tight_layout()
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/othergames_actiontypes_opp{opponent}_with2baselines.pdf', bbox_inches='tight', dpi=300)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/othergames_actiontypes_opp{opponent}_with2baselines.pdf', bbox_inches='tight', dpi=300)
 
     # Show the plot
     plt.show()
@@ -1674,7 +1676,7 @@ def visualise_unstructured_eval(opponent, extra, options, C_str, D_str):
     plt.tight_layout()
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/unstructured_opp{opponent}.pdf', bbox_inches='tight', dpi=300)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/unstructured_opp{opponent}.pdf', bbox_inches='tight', dpi=300)
 
     # Show the plot
     plt.show()
@@ -1793,7 +1795,7 @@ def visualise_unstructured_eval_4ipdprompts(opponent, extra, options, C_str, D_s
     plt.tight_layout()
 
     # Save the plot 
-    plt.savefig(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/fourIPDprompts_actiontypes_opp{opponent}.pdf', bbox_inches='tight', dpi=300)
+    plt.savefig(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/fourIPDprompts_actiontypes_opp{opponent}.pdf', bbox_inches='tight', dpi=300)
 
     # Show the plot
     plt.show()
@@ -1954,7 +1956,7 @@ EVALS_dir = 'EVALaction34vsRandom_samestate_orderpermuted1'
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderpermuted2'
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderreversed'
 
-os.chdir(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/')
+os.chdir(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/')
 
 if False: 
     num_episodes_trained=1000
@@ -2169,7 +2171,7 @@ EVALS_dir = 'EVALaction34vsRandom_samestate_orderoriginal'
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderpermuted1'
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderpermuted2'
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderreversed'
-os.chdir(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/')
+os.chdir(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/')
 visualise_othergames_eval(opponent='TFT', extra='', options=['COREDe', 'COREUt'],  C_str=C_str, D_str=D_str, include_Prompted=False)
 plot_regret_allgames(r_toplot='rewards_De', label='Deontological', opponent='TFT', options=['COREDe', 'COREUt'], extra='', include_NoFT=True, include_Prompted=False)
 plot_regret_allgames(r_toplot='rewards_Ut', label='Utilitarian', opponent='TFT', options=['COREDe', 'COREUt'], extra='', include_NoFT=True, include_Prompted=False)
@@ -2193,11 +2195,11 @@ visualise_reciprocity_eval_IPDonly(opponent='LLM', extra='_agentM', options=['CO
 
 
 EVALS_dir = 'EVALaction12vsRandom_samestate_orderoriginal_NEW'
-os.chdir(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/')
+os.chdir(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/')
 
 
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderoriginal_NEW'
-os.chdir(f'/Users/lizakarmannaya/Documents/Documents – Liza’s MacBook Pro/PhD_data/3. LLM_morality/RESULTS/{EVALS_dir}/')
+os.chdir(f'{SAVE_FIGURES_PATH}/RESULTS/{EVALS_dir}/')
 
 EVALS_dir = 'EVALaction34vsRandom_samestate_orderoriginal_NEW'
 
