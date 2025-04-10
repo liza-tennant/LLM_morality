@@ -63,7 +63,7 @@ You will need to configure an HF_token and a WANDB_API key and paste these at th
 | **Parameter** | **Values tested** | **Values used in paper** | 
 | --- | --- | --- | 
 Model | *Gemma2-2b-it*, *GPT2-small* | *Gemma2-2b-it*
-Action tokens *{C~legal~, D~legal~*} | *{action1, action2}*; *{action2, action1}*; *{A, B}*; *{B, A}*; *{X, Y}*; *{0,1}*; *{1,0}*; *{XY, YX}*; randomly generated strings of ASCII characters of varying lengths (2,3,7 tokens) | *{action1, action2}* at training time, *{action3, action4}* at test time
+Action tokens *{C<sub>legal</sub>, D<sub>legal</sub>*} | *{action1, action2}*; *{action2, action1}*; *{A, B}*; *{B, A}*; *{X, Y}*; *{0,1}*; *{1,0}*; *{XY, YX}*; randomly generated strings of ASCII characters of varying lengths (2,3,7 tokens) | *{action1, action2}* at training time, *{action3, action4}* at test time
 Batch size | 3; 5 | 5 for LLM vs static; 3 for LLM vs TFT |
 LoRA rank | 4; 64 | 64 |
 LoRA target modules | “all-linear”; [“q_proj”, “k_proj”, “v_proj”, “o_proj”] | “all-linear” |
@@ -71,8 +71,8 @@ Use adaptive KL control | Yes; No | Yes |
 Starting KL coefficient in adaptive KL control | 0.1; 0.2 | 0.2 |
 Gradient accumulation steps | 1 (no gradient accumulation); 4 | 4 |
 Reward normalization & scaling | Used; Not used | Used |
-Rillegal | -6; -15; -100 | -6 |
-IPD payoff range | 0-4; 0-100 | 0-4 |
+*R<sub>illegal<\sub>* | -6; -15; -100 | -6 |
+*IPD* payoff range | 0-4; 0-100 | 0-4 |
 
 Otherwise, we use the defaut parameters from the TRL package (including learning rate in PPO). 
 
